@@ -112,7 +112,7 @@ def preprocess_input(file_path, window_len, step_size):
 def my_parse_args():
     my_parser = argparse.ArgumentParser()
     my_parser.add_argument('-m', '--model', type=str, required=True, help='The prefix name of model files.')
-    my_parser.add_argument('-i', '--input', type=str, required=True, help='The sequence input file for prediction. Each line consists of two columns, with the format being <protein_id>\tab<protein_sequence>')
+    my_parser.add_argument('-i', '--input', type=str, required=True, help=r'The sequence input file for prediction. Each line consists of two columns, with the format being <protein_id>\tab<protein_sequence>')
     my_parser.add_argument('-l', '--length', type=int, default=300, help='The length of the peptides used for predicted, default: 300. It needs to be consistent with the length used during model training.')
     my_parser.add_argument('-s', '--step', type=int, default=30, help='The step size for sliding window on the protein sequence, default: 30.')
     my_parser.add_argument('-o', '--output', type=str, required=True, help='The prefix name of output files.')

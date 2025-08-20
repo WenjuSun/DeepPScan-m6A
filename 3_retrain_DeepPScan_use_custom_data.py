@@ -174,7 +174,7 @@ def tph_visualization(mt_history, pdf_file):
 
 def my_parse_args():
     my_parser = argparse.ArgumentParser()
-    my_parser.add_argument('-i', '--input', type=str, required=True, help='The sequences and scores input file is used for model training. Each line consists of three columns, with the format being <protein_id>\tab<protein_sequence>\tab<preference_score>')
+    my_parser.add_argument('-i', '--input', type=str, required=True, help=r'The sequences and scores input file is used for model training. Each line consists of three columns, with the format being <protein_id>\tab<protein_sequence>\tab<preference_score>')
     my_parser.add_argument('-l', '--length', type=int, default=300, help='The length of the peptides used for training, default: 300.')
     my_parser.add_argument('-s', '--step', type=int, default=30, help='The step size for sliding window on the protein sequence, default: 30.')
     my_parser.add_argument('-o', '--output', type=str, required=True, help='The prefix name of output model files.')
